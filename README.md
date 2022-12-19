@@ -72,5 +72,25 @@ cqlsh:first_app> select * from users;
 ### 2. GET /user - get a user
 
 Request:
+```sh
+curl --location --request GET 'http://localhost:3000/user/kecci1@mail.com' \
+--data-raw ''
+```
+
 Response:
+```json
+{
+    "email": "kecci1@mail.com",
+    "first_name": "kecci",
+    "last_name": "1"
+}
+```
+
 Database:
+```
+ email           | first_name | last_name
+-----------------+------------+-----------
+ kecci1@mail.com |      kecci |         1
+
+(1 rows)
+```
